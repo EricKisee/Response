@@ -1,0 +1,41 @@
+@host = http://localhost:8080/people
+
+GET {{host}} HTTP/1.1
+
+#add a record
+# POST {{host}} HTTP/1.1
+# Content-type: application/json
+
+# {
+#     "firstName" : "Frodo", 
+#     "lastName" : "Baggins" 
+# }
+    
+    # search a specific record by name 
+# GET {{host}}/search/findByLastName?name=Baggins HTTP/1.1
+
+#get a specific record ie id=1
+# GET {{host}}/1 HTTP/1.1
+
+#update all fields of a record
+# PUT {{host}}/1 HTTP/1.1
+# Content-type: application/json
+
+# {
+#     "firstName":"Freddy",
+#     "lastName" : "Beggins"
+
+# }
+
+
+#update a specific field in a record
+# PATCH {{host}}/1 HTTP/1.1
+# Content-tyype: application/json
+
+# {
+#     "firstName" : "Fredrick Erick"
+# }
+
+
+#delete a record ie id=4
+# DELETE {{host}}/4 HTTP/1.1
